@@ -1,0 +1,26 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z1125 Attacker API",
+    "version": "1.0.0",
+    "description": "Z1125ATTK own spec"
+  },
+  "servers": [
+    {
+      "url": "https://httpbin.org"
+    }
+  ],
+  "paths": {
+    "/get": {
+      "get": {
+        "summary": "Z1125ATTK echo",
+        "operationId": "atkGet",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    }
+  }
+}
