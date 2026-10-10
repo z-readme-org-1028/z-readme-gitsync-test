@@ -1,4 +1,4 @@
 ---
 name: Zglob1153
 ---
-Z1153 COLLIDE by b
+Z1153 shadow PATCH by b
