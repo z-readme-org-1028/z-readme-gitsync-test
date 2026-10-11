@@ -1,0 +1,26 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z1225 Open Child API",
+    "version": "1.0.0",
+    "description": "Z1225OPEN-RT4 canary"
+  },
+  "servers": [
+    {
+      "url": "https://ivan-test-ent-group-2-rm-d2830b72efcc.herokuapp.com"
+    }
+  ],
+  "paths": {
+    "/z1225-open-op": {
+      "get": {
+        "summary": "Z1225OPEN-RT4 op",
+        "operationId": "Z1225OPENRT4Op",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    }
+  }
+}
