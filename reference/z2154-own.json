@@ -20,7 +20,8 @@
           "200": {
             "description": "ok Z2154RRESP-e47541e025"
           }
-        }
+        },
+        "x-internal": false
       }
     }
   }
