@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Z2121 Try It probe",
+    "version": "1.0.0",
+    "description": "z2121 researcher temporary definition"
+  },
+  "x-readme": {
+    "proxy-enabled": true,
+    "samples-enabled": true
+  },
+  "servers": [
+    {
+      "url": "https://ivan-test-ent-group-1.readme.io/test-rtbg/z2121-tryit-sink"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Z2121-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ],
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Z2121 ping",
+        "operationId": "z2121ping",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    }
+  }
+}
