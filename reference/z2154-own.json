@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Z2154 Own Canary API",
+    "version": "1.0.0",
+    "description": "Own API Z2154RINFO-e47541e025"
+  },
+  "servers": [
+    {
+      "url": "https://example.invalid"
+    }
+  ],
+  "paths": {
+    "/z2154osecret": {
+      "get": {
+        "summary": "Z2154 own op Z2154ROP-e47541e025",
+        "description": "Own op description Z2154ROPDESC-e47541e025",
+        "operationId": "z2154OwnOp",
+        "responses": {
+          "200": {
+            "description": "ok Z2154RRESP-e47541e025"
+          }
+        }
+      }
+    }
+  }
+}
