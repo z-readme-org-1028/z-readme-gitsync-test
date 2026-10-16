@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Z2154 Own2 API",
+    "version": "1.0.0",
+    "description": "Own2 info <Z2154YevpBlk /> <Z2154HidBlk /> <Z2154RtbgBlk /> [l](doc:z2154y-e47541e025)"
+  },
+  "servers": [
+    {
+      "url": "https://example.invalid"
+    }
+  ],
+  "paths": {
+    "/z2154o2": {
+      "get": {
+        "summary": "Z2154 own2 op",
+        "description": "Own2 desc OWN2MARK\n\n<Z2154YevpBlk />\n\n<Z2154HidBlk />\n\n<Z2154RtbgBlk />\n\n[ysd](doc:z2154y-e47541e025) [ysr](ref:z2154yevpop) [hr](ref:z2154hidop)",
+        "operationId": "z2154Own2Op",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    }
+  }
+}
