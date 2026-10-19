@@ -1,4 +1,0 @@
----
-title: Z2317 CSRF Canary
----
-Z2317-GET-MERGE-CANARY
