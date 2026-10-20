@@ -5,4 +5,5 @@ api:
 hidden: false
 recipes:
   - z2564-valid-ref
+  - z2564-sibling-ref
 ---
