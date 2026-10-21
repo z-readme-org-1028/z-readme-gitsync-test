@@ -1,4 +1,0 @@
----
-title: /changelogs
-hidden: false
----
