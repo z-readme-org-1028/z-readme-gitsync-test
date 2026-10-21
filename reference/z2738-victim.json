@@ -6,7 +6,12 @@
   },
   "servers": [
     {
-      "url": "https://z2738-victim.invalid"
+      "url": "https://{zhost}",
+      "variables": {
+        "zhost": {
+          "default": "z2738-victim.invalid"
+        }
+      }
     }
   ],
   "paths": {
