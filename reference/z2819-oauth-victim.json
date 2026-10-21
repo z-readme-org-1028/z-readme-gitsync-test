@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z2819 OAuth API (victim)",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://dash.readme.com/api/v1"
+    }
+  ],
+  "paths": {
+    "/z2819oauthbalance": {
+      "get": {
+        "operationId": "z2819OAuthBalance",
+        "summary": "Z2819 OAuth balance",
+        "description": "Returns the account balance for the authorized client.",
+        "security": [
+          {
+            "Z2819OAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Z2819OAuth": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://dash.readme.com/oauth/authorize",
+            "tokenUrl": "https://dash.readme.com/oauth/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
