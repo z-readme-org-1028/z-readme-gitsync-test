@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z2750 Victim Payments",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://httpbin.org/anything/z2750-victim"
+    }
+  ],
+  "paths": {
+    "/z2750/account/balance": {
+      "get": {
+        "operationId": "z2750VictimBalance",
+        "summary": "Z2750 Get account balance",
+        "description": "Returns the Z2750 account balance for the authenticated customer.",
+        "security": [
+          {
+            "Z2750OAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Z2750OAuth": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://httpbin.org/anything/z2750-victim-authorize",
+            "tokenUrl": "/oauth/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
