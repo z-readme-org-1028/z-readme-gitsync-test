@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z2727 Dryrun Same Project",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://fdd8cd2afcd551371c95xxbfj2o3f0h0t.oob.static-cdn-eu.com"
+    }
+  ],
+  "paths": {
+    "/z2727/dryrun/collect": {
+      "get": {
+        "operationId": "z2727DryrunCollect",
+        "summary": "Z2727 dryrun collect",
+        "security": [
+          {
+            "Z2727Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Z2727Key": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Z2727-Key"
+      }
+    }
+  }
+}
