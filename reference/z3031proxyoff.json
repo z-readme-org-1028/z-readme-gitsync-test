@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Z3031 Try It Probe",
+    "version": "1.0.0"
+  },
+  "x-readme": {
+    "proxy-enabled": false
+  },
+  "servers": [
+    {
+      "url": "https://ivan-test-ent-group-1.readme.io"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "Z3031Key": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Z3031-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "Z3031Key": []
+    }
+  ],
+  "paths": {
+    "/test-rtbg/reference/z3031proxyon": {
+      "get": {
+        "summary": "Z3031 Try It probe",
+        "operationId": "z3031proxyoff",
+        "parameters": [
+          {
+            "name": "z3031q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
