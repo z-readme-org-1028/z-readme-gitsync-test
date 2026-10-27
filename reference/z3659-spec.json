@@ -1,0 +1,49 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Z3659 Test API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{apihost}/z3659",
+      "variables": {
+        "apihost": {
+          "default": "httpbin.org"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/get": {
+      "get": {
+        "operationId": "getTest",
+        "summary": "Get test",
+        "security": [
+          {
+            "z3659prov": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "z3659prov": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://httpbin.org/z3659/authz",
+            "tokenUrl": "https://httpbin.org/z3659/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
