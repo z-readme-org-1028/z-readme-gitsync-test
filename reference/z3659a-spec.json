@@ -1,0 +1,49 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Z3659A Victim API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{apihost}/z3659a",
+      "variables": {
+        "apihost": {
+          "default": "welding-administered-goes-pulled.trycloudflare.com"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/get": {
+      "get": {
+        "operationId": "getVictim",
+        "summary": "Get victim endpoint",
+        "security": [
+          {
+            "z3657prov": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "z3657prov": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/authz",
+            "tokenUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
