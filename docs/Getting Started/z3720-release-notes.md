@@ -10,7 +10,7 @@ This page lists the changes in each release.
 
 ## Latest release
 
-Version 1.0.0 is the current release.
+Version 1.0.1 is the current release. It fixes a login bug (Z3720-ADMIN-LINE).
 
 ## Support
 
