@@ -1,0 +1,60 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Z3742 Guest Probe API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{apihost}/z3627",
+      "variables": {
+        "apihost": {
+          "default": "welding-administered-goes-pulled.trycloudflare.com"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/api/me": {
+      "get": {
+        "operationId": "getMe",
+        "summary": "Z3742 get me",
+        "security": [
+          {
+            "z3742prov": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
+    "/api/open": {
+      "get": {
+        "operationId": "getOpen",
+        "summary": "Z3742 open op",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "z3742prov": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/authz",
+            "tokenUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
