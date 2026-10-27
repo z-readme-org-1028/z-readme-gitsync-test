@@ -1,0 +1,56 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Z3657 Partial Host",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://{tenant}.trycloudflare.com/z3627",
+      "variables": {
+        "tenant": {
+          "default": "welding-administered-goes-pulled"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "oauth2": []
+    }
+  ],
+  "paths": {
+    "/api/me": {
+      "get": {
+        "operationId": "getMe",
+        "summary": "Get user info",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/authz",
+            "tokenUrl": "https://welding-administered-goes-pulled.trycloudflare.com/z3627/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}
