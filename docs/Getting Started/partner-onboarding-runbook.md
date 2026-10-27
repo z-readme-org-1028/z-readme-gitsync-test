@@ -1,6 +1,8 @@
 ---
 title: Partner Onboarding Runbook
 ---
+Runbook reference code: Z3783-SLACK-3d8b02112c
+
 This runbook describes how new partners are onboarded to the platform.
 
 ## Steps
